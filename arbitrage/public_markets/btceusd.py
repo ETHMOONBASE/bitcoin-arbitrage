@@ -24,7 +24,7 @@ class BtceUSD(Market):
         l.sort(key=lambda x: float(x[0]), reverse=reverse)
         r = []
         for i in l:
-            r.append({'price': float(i[0]), 'amount': float(i[1])})
+            r.append({'price': float(i[0]) * float(1.002), 'amount': float(i[1])})
         return r
 
     def format_depth(self, depth):

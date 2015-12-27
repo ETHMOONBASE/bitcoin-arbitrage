@@ -27,7 +27,7 @@ class BitfinexUSD(Market):
         l.sort(key=lambda x: float(x["price"]), reverse=reverse)
         r = []
         for i in l:
-            r.append({'price': float(i['price']),
+            r.append({'price': float(i['price']) * float(0.998),
                       'amount': float(i['amount'])})
         return r
 
